@@ -1,0 +1,16 @@
+# Minecraft Server-Daten (niemals pushen!)
+server/
+server/**
+
+# Logs
+*.log
+
+# Node / Build
+node_modules/
+dist/
+build/
+
+# Editor / OS
+.idea/
+.vscode/
+.DS_Store

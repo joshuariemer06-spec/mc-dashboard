@@ -1,0 +1,17 @@
+services:
+  backend:
+    image: mc-dashboard-backend:local
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./server:/srv/mc
+      - ./backend/data:/app/data
+    restart: unless-stopped
+
+  frontend:
+    image: mc-dashboard-frontend:local
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
